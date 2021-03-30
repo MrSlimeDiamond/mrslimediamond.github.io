@@ -1,0 +1,55 @@
+<html>
+<head>
+        <!--  <link rel="shortcut icon" href="favicon.ico" type="image/ico" /> --> <!-- Currently not needed because wordpress does it itself -->
+   <title>Clicker game</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> <!-- Don't remove me -->
+ <div class="container"> <!-- So it's indented a bit, it makes it look better :) -->
+     <br><br> <!-- Indents on the top -->
+</head>
+<body style="background: #292929;">
+        <p style="font-size: 30px; font-family: arial; color: white;">Clicker game</p>
+
+    <p style="font-size: 18px; font-family: arial; color: white;">
+        Your funny bunny money: $<span id="balance">0</span> <!-- Starts with $0 -->
+        <br>
+        My houses: <span id="houses">None</span> <!-- Starts with no houses -->
+    </p>
+
+    <!--    <button class="btn btn-lg btn-success" onClick="addMoney();">Earn Money</button> -->
+    <img src="bunny.jpg" onClick="addMoney();" height="300" width="300">
+    <button class="btn btn-lg btn-primary" onClick="buyHouse();">Buy house</button>
+    <br><br>
+    <p style="font-size: 20px; font-family: arial; color: white;">
+    This project is an ongoing work in progress!
+        </p>
+        <p style="font-family: arial; font-size: 15px; color: white;">
+    This is based off another game by <a href="http://jet.wilton.kiwi.nz">Jet Wilton</a>
+    <br>
+    <a href="http://jet.wilton.kiwi.nz/Clicker_Game/">Check out the original game</a>
+</p>
+</div>
+
+</body>
+    <script>
+    var balance = 0;
+    var houses = 0;
+    function addMoney(){
+        balance++;
+        document.getElementById("balance").innerHTML = balance;
+    }
+function buyHouse(){
+if(balance >= 500){
+//alert("buy house");
+houses++
+        for(let i=0; i++ < 500;){
+        balance--
+        }
+document.getElementById("houses").innerHTML = houses;
+document.getElementById("balance").innerHTML = balance;
+}else{
+alert("not Enough money");
+}
+}
+
+    </script>
+    </html>
